@@ -1,0 +1,60 @@
+.map {
+    border-left: 1px solid #fff;
+    position: absolute;
+    left: 40%;
+    width: 60%;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .pad2 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .sidebar {
+    width: 40%;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    background-color: lightslategray;
+    overflow: hidden;
+  }
+
+  html, body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+#form {
+    margin: 10px;
+    height: 15%;
+}
+
+#results {
+    width: 100%;
+    overflow: scroll;
+    height: 82.5%;
+}
+
+#results .college-info {
+    width: 80%;
+    height: 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+#results .college-name {
+    color: white;
+    width: 80%;
+    height: 10px;
+    float: left;
+}
+
+#results .college-location {
+    height: 10px;
+
+}

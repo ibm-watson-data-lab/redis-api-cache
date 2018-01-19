@@ -1,0 +1,25 @@
+{
+  "name": "redis-ex-cache",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mapbox": "^1.0.0-beta9",
+    "mapbox-gl": "^0.43.0",
+    "node-fetch": "^1.7.3",
+    "redis": "^2.8.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.0"
+  }
+}
