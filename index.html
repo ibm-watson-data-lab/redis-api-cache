@@ -27,7 +27,7 @@
     </div>
     <script>
         mapboxgl.accessToken =
-            "...";
+            "pk.eyJ1IjoiYWFsZ2VyIiwiYSI6ImNqMzB2OGJlbjAwMW8zM2s4cWVsY3IybWIifQ.9qDiHbV9N5ezaQ8czC9gew";
 
         const map = new mapboxgl.Map({
             container: 'map',
@@ -36,9 +36,12 @@
             zoom: 3
         });
 
+        var popup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: false
+        });
+
         $(document).ready(function (e) {
-
-
 
             $("form").submit(function (e) {
                 e.preventDefault();
@@ -101,6 +104,21 @@
                             }
                         });
 
+                        map.on('mouseenter', 'point', function (e) {
+                            // Change the cursor style as a UI indicator.
+                            map.getCanvas().style.cursor = 'pointer';
+
+                            // Populate the popup and set its coordinates
+                            // based on the feature found.
+                            popup.setLngLat(e.features[0].geometry.coordinates)
+                                .setHTML(e.features[0].properties.name)
+                                .addTo(map);
+                        });
+
+                        map.on('mouseleave', 'point', function () {
+                            map.getCanvas().style.cursor = '';
+                            popup.remove();
+                        });
 
                     },
                     error: function (error) {
@@ -108,10 +126,6 @@
                     }
                 });
             });
-
-
-
-
 
         });
     </script>

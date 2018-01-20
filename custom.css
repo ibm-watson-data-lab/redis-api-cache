@@ -31,13 +31,13 @@
 
 #form {
     margin: 10px;
-    height: 15%;
+    height: 5%;
 }
 
 #results {
     width: 100%;
     overflow: scroll;
-    height: 82.5%;
+    height: 92.3333%;
 }
 
 #results .college-info {
