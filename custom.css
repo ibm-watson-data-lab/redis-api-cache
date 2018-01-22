@@ -31,13 +31,10 @@
 
 #form {
     margin: 10px;
-    height: 15%;
 }
 
 #results {
-    width: 100%;
     overflow: scroll;
-    height: 82.5%;
 }
 
 #results .college-info {
@@ -56,5 +53,4 @@
 
 #results .college-location {
     height: 10px;
-
 }

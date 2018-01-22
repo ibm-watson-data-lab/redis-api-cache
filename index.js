@@ -53,6 +53,7 @@ app.get('/api/colleges', (req, res) => {
         .then(json => {
           console.log(json)
           client.set(college, JSON.stringify(json));
+          //client.setex(college, 300, JSON.stringify(json));
           res.send(json);
         })
         .catch(err => {
