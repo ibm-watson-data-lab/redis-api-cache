@@ -17,8 +17,8 @@
             <div id="form">
                 <form action="/api/colleges/" method="post">
                     <label>College name:</label>
-                    <input type="text" name="college" />
-                    <input type="submit" />
+                    <input class="college-search" type="text" name="college" />
+                    <input class="search-button" type="submit" />
                 </form>
             </div>
             <div id="results"></div>
@@ -27,7 +27,7 @@
     </div>
     <script>
         mapboxgl.accessToken =
-            "pk.....";
+            "pk...";
 
         const map = new mapboxgl.Map({
             container: 'map',

@@ -19,7 +19,7 @@
     top: 0;
     bottom: 0;
     margin: 0;
-    background-color: lightslategray;
+    background-color: rgb(174, 181, 187);
     overflow: hidden;
   }
 
@@ -57,4 +57,24 @@
 #results .college-location {
     height: 10px;
 
+}
+
+.college-search {
+    height: 20px;
+    color:  white;
+    border: none;
+    background-color: rgb(134, 140, 145); 
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.search-button {
+    height: 20px;
+    color: white;
+    background-color: rgb(134, 140, 145); 
+    font-size: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
 }
