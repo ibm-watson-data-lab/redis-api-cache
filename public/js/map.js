@@ -1,5 +1,5 @@
 // Mapbox access token.
-mapboxgl.accessToken = "";
+mapboxgl.accessToken = "pk.eyJ1IjoiYWFsZ2VyIiwiYSI6ImNqMzB2OGJlbjAwMW8zM2s4cWVsY3IybWIifQ.9qDiHbV9N5ezaQ8czC9gew";
 
 // Initialize Mapbox and place the center of the map on the United States.
 const map = new mapboxgl.Map({
@@ -94,7 +94,7 @@ $(document).ready(function(e) {
                     "source": "points",
                     "type": "circle",
                     "paint": {
-                        "circle-radius": 5,
+                        "circle-radius": 4,
                         "circle-color": "rgba(55,148,179,1)"
                     }
                 });

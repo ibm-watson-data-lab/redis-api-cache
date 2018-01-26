@@ -3,10 +3,11 @@ const app = express();
 const redis = require("redis");
 const url = require("url");
 const fetch = require("node-fetch");
+require('dotenv').config();
 
 app.use(express.static(__dirname + "/public"));
 
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.DATAGOV_API_KEY;
 const connectionString = process.env.COMPOSE_REDIS_URL;
 
 if (connectionString === undefined) {
