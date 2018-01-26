@@ -48,7 +48,9 @@ $(document).ready(function(e) {
                 // which we got back from the College Scorecard API.
                 let colleges = data.results;
 
-                // Loops through each result using jQuery.
+                // Loops through each result. It generates a list of colleges
+                // and it creates a GeoJSON object for each of them to append to
+                // the Mapbox map.
                 $.each(colleges, function(index, item) {
 
                     // Creates a <div> for each college name within the results array.
