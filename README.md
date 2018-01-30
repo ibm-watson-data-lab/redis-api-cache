@@ -16,7 +16,7 @@ Once you're in IBM Cloud, just click on **Create Resource** and look for Compose
 
 That will take you to your Compose for Redis management page. You'll see your Redis connection string URI within the _Connection Strings_ panel.
 
-![]()
+![ibm compose redis screenshot](/screenshots/redis.png)
 
 ### Setting Environment Variables
 
