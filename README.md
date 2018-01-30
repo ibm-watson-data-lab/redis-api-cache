@@ -16,9 +16,15 @@ Once you're in IBM Cloud, just click on **Create Resource** and look for Compose
 
 That will take you to your Compose for Redis management page. You'll see your Redis connection string URI within the _Connection Strings_ panel.
 
-### Storing Environment Variables
+### Setting Environment Variables
 
-Create a file called `.env` to store environment variables. A template for that file is `.env.template` in the repository. Set `COMPOSE_REDIS_URL` to your IBM Compose for Redis URI and `DATAGOV_API_KEY` to the Data.Gov API key that was emailed to you.
+Create a file called `.env` to store environment variables. A template for that file is `.env.template` in this repository. Copy the contents of the `.env.template` file into `.env`.
+
+```shell
+COMPOSE_REDIS_URL=xxxxxxxxxxxxxxxxxxxxxxx
+DATAGOV_API_KEY=xxxxxxxxxxxxxxxxxxxxxxx
+```
+Then set `COMPOSE_REDIS_URL` to your IBM Compose for Redis URI and `DATAGOV_API_KEY` to the Data.Gov API key that was emailed to you.
 
 Both of these variables are used inside the `server.js` file as:
 
@@ -27,7 +33,7 @@ const apiKey = process.env.DATAGOV_API_KEY;
 const connectionString = process.env.COMPOSE_REDIS_URL;
 ```
 
-Within the `map.js` file, in the `public/js/` folder, substitute the Mapbox access token with your own:
+Next, within the `map.js` file, in the `public/js/` folder, substitute the Mapbox access token with your own:
 
 ```javascript
 mapboxgl.accessToken = "pk.eyJ1IjoiYWFsZ2VyIiwiYSI6ImNqMzB2OGJlbjAwMW8zM2s4cWVsY3IybWIifQ.9qDiHbV9N5ezaQ8czC9gew";
