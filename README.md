@@ -23,7 +23,7 @@ That will take you to your Compose for Redis management page. You'll see your Re
 Create a file called `.env` to store environment variables. A template for that file is `.env.template` in this repository. Copy the contents of the `.env.template` file into `.env`.
 
 ```shell
-COMPOSE_REDIS_URL=redis://admin:<password>@sl-us-south-1-portal.20.dblayer.com:33282
+COMPOSE_REDIS_URL=xxxxxxxxxxxxxxxxxxxxxxx
 DATAGOV_API_KEY=xxxxxxxxxxxxxxxxxxxxxxx
 ```
 
