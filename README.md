@@ -36,7 +36,7 @@ const apiKey = process.env.DATAGOV_API_KEY;
 const connectionString = process.env.COMPOSE_REDIS_URL;
 ```
 
-Next, within the `map.js` file, in the `public/js/` folder, substitute the Mapbox access token with your own:
+Next, within `public/js/results.js`, substitute the Mapbox access token with your own:
 
 ```javascript
 mapboxgl.accessToken = "pk.eyJ1IjoiYWFsZ2VyIiwiYSI6ImNqMzB2OGJlbjAwMW8zM2s4cWVsY3IybWIifQ.9qDiHbV9N5ezaQ8czC9gew";

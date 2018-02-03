@@ -5,8 +5,6 @@ const url = require("url");
 const fetch = require("node-fetch");
 require('dotenv').config();
 
-app.use(express.static(__dirname + "/public"));
-
 const apiKey = process.env.DATAGOV_API_KEY;
 const connectionString = process.env.COMPOSE_REDIS_URL;
 
@@ -24,6 +22,8 @@ if (connectionString.startsWith("rediss://")) {
 } else {
   client = redis.createClient(connectionString);
 }
+
+app.use(express.static(__dirname + "/public"));
 
 app.get('/api/colleges', (req, res) => {
   let query = req.query.college;
