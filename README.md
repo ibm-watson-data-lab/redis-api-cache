@@ -14,7 +14,7 @@ A small application that demonstrates how to use IBM Compose for Redis as a cach
 
 Once you're in IBM Cloud, just click on **Create Resource** and look for Compose for Redis. Click on it to get into the service page, then click on **Create** to create the database.
 
-That will take you to your Compose for Redis management page. You'll see your Redis connection string URI within the _Connection Strings_ panel.
+That will take you to your Compose for Redis management page. You'll see your Redis connection string URI within the _Connection Strings_ panel. Also, click on the tab _SSL Certificate_ and store that certificate in a file called `caCert.crt`. We'll use that when making a TLS connection to Redis.
 
 ![ibm compose redis screenshot](/screenshots/redis.png)
 
@@ -34,7 +34,8 @@ Both of these variables are used inside the `server.js` file as:
 ```javascript
 const apiKey = process.env.DATAGOV_API_KEY;
 const connectionString = process.env.COMPOSE_REDIS_URL;
-```
+``
+
 
 Next, within `public/js/results.js`, substitute the Mapbox access token with your own:
 
