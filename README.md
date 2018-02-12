@@ -34,7 +34,7 @@ Both of these variables are used inside the `server.js` file as:
 ```javascript
 const apiKey = process.env.DATAGOV_API_KEY;
 const connectionString = process.env.COMPOSE_REDIS_URL;
-``
+```
 
 
 Next, within `public/js/results.js`, substitute the Mapbox access token with your own:
