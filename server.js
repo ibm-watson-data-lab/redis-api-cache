@@ -3,10 +3,14 @@ const app = express();
 const redis = require("redis");
 const url = require("url");
 const fetch = require("node-fetch");
+const fs = require('fs');
 require('dotenv').config();
+
+app.use(express.static(__dirname + "/public"));
 
 const apiKey = process.env.DATAGOV_API_KEY;
 const connectionString = process.env.COMPOSE_REDIS_URL;
+const caCert = fs.readFileSync('./caCert.crt');
 
 if (connectionString === undefined) {
   console.error("Please set the COMPOSE_REDIS_URL environment variable");
@@ -17,13 +21,11 @@ let client = null;
 
 if (connectionString.startsWith("rediss://")) {
   client = redis.createClient(connectionString, {
-    tls: { servername: new URL(connectionString).hostname }
+    tls: {  ca: caCert }
   });
 } else {
   client = redis.createClient(connectionString);
 }
-
-app.use(express.static(__dirname + "/public"));
 
 app.get('/api/colleges', (req, res) => {
   let query = req.query.college;
